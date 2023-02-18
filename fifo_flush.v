@@ -56,15 +56,6 @@ module fifo_flush (input wire clk,
         assign fifo_out[i_1*4+:4] = ( i_1+rd_ptr<wr_ptr )?fifo_data_q[i_1+rd_ptr]:4'hC;
     end
     
-    initial begin
-        $dumpfile( "fifo_flush_tb.vcd" );
-        $dumpvars( 0, DUT );
-        // $dumpvars( 0, fifo_data_q[0], fifo_data_q[1], fifo_data_q[2], fifo_data_q[3], fifo_data_q[4], fifo_data_q[5], fifo_data_q[6], fifo_data_q[7], fifo_data_q[8], fifo_data_q[9], fifo_data_q[10] );
-        // $dumpvars( 0, fifo_data_q[11], fifo_data_q[12], fifo_data_q[13], fifo_data_q[14], fifo_data_q[15], fifo_data_q[16], fifo_data_q[17], fifo_data_q[18], fifo_data_q[19], fifo_data_q[20], fifo_data_q[21], fifo_data_q[22] );
-        // $dumpvars( 0, fifo_data_q[23], fifo_data_q[24], fifo_data_q[25], fifo_data_q[26], fifo_data_q[27], fifo_data_q[28], fifo_data_q[29], fifo_data_q[30], fifo_data_q[31] );
-    end
-    
-    
     
     reg [31:0] wr_ptr,rd_ptr;
     
