@@ -20,18 +20,32 @@ module fifo_flush (input wire clk,
     
     assign fifo_flush_done_o = fifo_rd_valid_i;
 
+  	wire next_fifo_empty;
     assign next_fifo_empty = rd_ptr == wr_ptr;
-    reg fifo_empty;
+    reg empty,fifo_empty;
     always @ (posedge clk or negedge reset)
-      if(reset) fifo_empty = 1;
-      else fifo_empty = next_fifo_empty;
+      if(reset) begin
+      empty = 1;
+      fifo_empty = 1;
+      end
+      else begin
+        empty <= next_fifo_empty;
+        fifo_empty <= empty;
+      end
     assign fifo_empty_o = fifo_empty;
     
+  	wire next_fifo_full;
     assign next_fifo_full = rd_ptr == wr_ptr+1;
-    reg fifo_full;
+    reg full,fifo_full;
     always @ (posedge clk or negedge reset)
-      if(reset) fifo_full = 0;
-      else fifo_full = next_fifo_full;
+      if(reset) begin
+        fifo_full = 0;
+        full = 0;
+      end
+      else begin
+        full <= next_fifo_full;
+        fifo_full <= full;
+      end
 
     assign fifo_full_o = fifo_full;
 
