@@ -62,6 +62,20 @@ R0
 R0
 R0
 R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
 !s11f MIXED_VERSIONS
 13
 !s112 1.1
@@ -71,16 +85,37 @@ R0
 cModel Technology
 Z1 d/mnt/ncsudrive/i/immoghul/FIFO_Flush
 T_opt
-!s110 1677024644
-V8b1IVn>H7TQFZ0DD[K@l^1
-04 13 4 work fifo_flush_tb fast 0
-=1-1866daf7ffd6-63f55d83-da651-5dff
-!s124 OEM100
-o-quiet -auto_acc_if_foreign -work work +acc
-Z2 tCvgOpt 0
+!s110 1677438781
+Ve1KT<TgNU>:`<]m6C7N3Z0
+Z2 04 13 4 work fifo_flush_tb fast 0
+=1-801844eb7c01-63fbaf3c-7edb6-7370
+Z3 !s124 OEM100
+Z4 o-quiet -auto_acc_if_foreign -work work +acc
+Z5 tCvgOpt 0
 n@_opt
-OE;O;2021.2;73
+Z6 OE;O;2021.2;73
 R1
+T_opt1
+!s110 1677438697
+V<iKlf4iMkK`W]?6n<YYVo2
+R2
+=1-801844eb7c01-63fbaee8-44cd2-61a7
+R3
+R4
+R5
+n@_opt1
+R6
+R1
+T_opt2
+!s110 1677439552
+VJFDMNnfGIAX3fJ@8iofJE0
+04 19 4 work fifo_flush_async_tb fast 0
+=1-801844eb7c01-63fbb23f-12fa7-16b9
+R3
+R4
+R5
+n@_opt2
+R6
 vfifo_flush
 !s110 1676924653
 !i10b 1
@@ -92,8 +127,8 @@ w1676913413
 Ffifo_flush.v
 !i122 92
 L0 1 143
-Z3 VDg1SIo80bB@j0V0VzS_@n1
-Z4 OE;L;2021.2;73
+Z7 VDg1SIo80bB@j0V0VzS_@n1
+Z8 OE;L;2021.2;73
 r1
 !s85 0
 31
@@ -101,49 +136,71 @@ r1
 !s107 fifo_flush_tb.v|fifo_flush.v|
 !s90 fifo_flush.v|fifo_flush_tb.v|
 !i113 0
-Z5 o-L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
-R2
+Z9 o-L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R5
 vfifo_flush_async
-!s110 1677027976
+Z10 !s110 1677439547
 !i10b 1
-!s100 0NNZQBD=e429@]OOG`<R62
-Io_n5f9dD9_=]6XL4JzdNd3
+!s100 49f@j7W:HC@F>MlnNHnJJ2
+I85MlXA;0QjO]?@TRV<b`c1
 R1
-w1677027738
+w1677439546
 8fifo_flush_async.v
 Ffifo_flush_async.v
-!i122 115
-L0 1 71
-R3
-R4
-r1
-!s85 0
-31
-!s108 1677027975.000000
-Z6 !s107 fifo_flush_async_tb.v|fifo_flush_async.v|
-Z7 !s90 fifo_flush_async.v|fifo_flush_async_tb.v|
-!i113 0
-R5
-R2
-vfifo_flush_tb
-!s110 1677024640
-!i10b 1
-!s100 i5RUI_ce_<8eJ4o8@dzMl0
-IW5M8G13@T26P?QZfmicl21
-R1
-w1677024619
-8fifo_flush_async_tb.v
-Ffifo_flush_async_tb.v
-!i122 114
-L0 1 67
-R3
-R4
-r1
-!s85 0
-31
-!s108 1677024640.000000
-R6
+!i122 147
+L0 1 72
 R7
+R8
+r1
+!s85 0
+31
+Z11 !s108 1677439547.000000
+Z12 !s107 fifo_flush_async_tb.v|fifo_flush_async.v|
+Z13 !s90 fifo_flush_async.v|fifo_flush_async_tb.v|
 !i113 0
+R9
 R5
-R2
+vfifo_flush_async_tb
+R10
+!i10b 1
+!s100 825a9ZdiH0RQK?cEhcZfO0
+I<SWFDXD1B:EVd@7>KBWn=2
+R1
+w1677439087
+Z14 8fifo_flush_async_tb.v
+Z15 Ffifo_flush_async_tb.v
+!i122 147
+Z16 L0 1 69
+R7
+R8
+r1
+!s85 0
+31
+R11
+R12
+R13
+!i113 0
+R9
+R5
+vfifo_flush_tb
+!s110 1677439005
+!i10b 1
+!s100 1J@PZHlO[X17AKg2@nKgH1
+I=JhanDfS=9cUW5OXOWn2H2
+R1
+w1677438901
+R14
+R15
+!i122 141
+R16
+R7
+R8
+r1
+!s85 0
+31
+!s108 1677439004.000000
+R12
+!s90 -reportprogress|300|fifo_flush_async.v|fifo_flush_async_tb.v|
+!i113 0
+R9
+R5

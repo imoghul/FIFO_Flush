@@ -13,16 +13,14 @@
 # //
 # OpenFile vsim.wlf
 add wave -position insertpoint  \
-vsim:/fifo_flush_tb/rst \
-vsim:/fifo_flush_tb/rclock \
-vsim:/fifo_flush_tb/wclock \
-vsim:/fifo_flush_tb/fifo_wr_valid_i \
-vsim:/fifo_flush_tb/fifo_rd_valid_i \
-vsim:/fifo_flush_tb/fifo_flush_i \
-vsim:/fifo_flush_tb/fifo_wr_data_i \
-vsim:/fifo_flush_tb/fifo_empty_o \
-vsim:/fifo_flush_tb/fifo_full_o \
-vsim:/fifo_flush_tb/fifo_rd_data_o
-add wave -position insertpoint  \
-vsim:/fifo_flush_tb/DUT/fifo_out \
-vsim:/fifo_flush_tb/DUT/fifo_out_show
+vsim:/fifo_flush_async_tb/rst \
+vsim:/fifo_flush_async_tb/rclock \
+vsim:/fifo_flush_async_tb/wclock \
+vsim:/fifo_flush_async_tb/fifo_wr_valid_i \
+vsim:/fifo_flush_async_tb/fifo_rd_valid_i \
+vsim:/fifo_flush_async_tb/fifo_flush_i \
+vsim:/fifo_flush_async_tb/fifo_wr_data_i \
+vsim:/fifo_flush_async_tb/fifo_empty_o \
+vsim:/fifo_flush_async_tb/fifo_full_o \
+vsim:/fifo_flush_async_tb/fifo_rd_data_o \
+vsim:/fifo_flush_async_tb/fifo_curr_o
