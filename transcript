@@ -24,3 +24,5 @@ vsim:/fifo_flush_async_tb/fifo_empty_o \
 vsim:/fifo_flush_async_tb/fifo_full_o \
 vsim:/fifo_flush_async_tb/fifo_rd_data_o \
 vsim:/fifo_flush_async_tb/fifo_curr_o
+add wave -position insertpoint  \
+vsim:/fifo_flush_async_tb/DUT/size

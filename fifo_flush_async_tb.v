@@ -4,8 +4,8 @@ module fifo_flush_async_tb;
   reg [3:0] fifo_wr_data_i;
   wire fifo_empty_o, fifo_full_o;
   wire [31:0] fifo_rd_data_o;
-  wire [31:0] fifo_curr_o;
-  fifo_flush_async DUT (
+  wire [3:0] fifo_curr_o;
+  fifo_flush_async_grey DUT (
       .rclock(rclock),
       .wclock(wclock),
       .reset(rst),

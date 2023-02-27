@@ -6,7 +6,7 @@ module fifo_flush_async (
     input wire [3:0] fifo_wr_data_i,
     input wire fifo_rd_valid_i,
     output wire [31:0] fifo_rd_data_o, 
-    output wire [31:0] fifo_curr_o,
+    output wire [3:0] fifo_curr_o,
     input wire fifo_flush_i,
     output wire fifo_empty_o,
     output wire fifo_full_o
@@ -22,7 +22,7 @@ module fifo_flush_async (
   reg [3:0] fifo_data_q[31:0];
 
   reg [3:0] fifo_curr;
-  wire   [3:0] next_fifo_curr;
+  wire [3:0] next_fifo_curr;
   wire [31:0] fifo_out;
   reg [31:0] fifo_out_show;
   assign fifo_rd_data_o = fifo_out_show;
@@ -54,6 +54,7 @@ module fifo_flush_async (
     if (reset) begin
       rd_ptr = 0;
       fifo_out_show = 0;
+      fifo_curr = 0;
     end else begin
       if (fifo_flush_i) begin
         fifo_out_show = fifo_out;
