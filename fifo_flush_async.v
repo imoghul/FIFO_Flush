@@ -5,7 +5,7 @@ module fifo_flush_async (
     input wire fifo_wr_valid_i,
     input wire [3:0] fifo_wr_data_i,
     input wire fifo_rd_valid_i,
-    output wire [31:0] fifo_rd_data_o, 
+    output wire [31:0] fifo_rd_data_o,
     output wire [3:0] fifo_curr_o,
     input wire fifo_flush_i,
     output wire fifo_empty_o,
@@ -32,7 +32,7 @@ module fifo_flush_async (
   for (i_1 = 0; i_1 < 8; i_1 = i_1 + 1) begin
     assign fifo_out[i_1*4+:4] = (i_1 + rd_ptr < wr_ptr) ? fifo_data_q[i_1+rd_ptr] : 4'hC;
   end
-  assign next_fifo_curr = fifo_rd_valid_i ? fifo_data_q[rd_ptr]:0;
+  assign next_fifo_curr = fifo_rd_valid_i ? fifo_data_q[rd_ptr] : 0;
   assign fifo_curr_o = fifo_curr;
   // write to fifo
   always @(posedge wclock or negedge reset) begin
