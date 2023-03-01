@@ -34,7 +34,7 @@ module fifo_flush_async_grey (
       size = 0;
       for (i_2 = 0; i_2 < 32; i_2 = i_2 + 1) fifo_data_q[i_2] <= 0;
     end else begin
-      if (fifo_wr_valid_i) begin
+      if (fifo_wr_valid_i && !fifo_full_o) begin
         fifo_data_q[wr_ptr] <= fifo_wr_data_i;
         size = size + 1;
       end else begin
@@ -59,8 +59,8 @@ module fifo_flush_async_grey (
       size = 0;
     end
     else begin
-      size = rd_signal ? size - 1 : size;
-      out = rd_signal ? fifo_data_q[rd_ptr] : 0;
+      size = (rd_signal  && !fifo_empty_o) ? size - 1 : size;
+      out = (rd_signal && !fifo_empty_o) ? fifo_data_q[rd_ptr] : 0;
     end
   end
 

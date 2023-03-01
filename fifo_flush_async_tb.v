@@ -57,7 +57,7 @@ module fifo_flush_async_tb;
     fifo_rd_valid_i = 0;
     fifo_flush_i = 0;
     #60 fifo_flush_i = 1;
-    #2 fifo_flush_i = 0;
+    #4 fifo_flush_i = 0;
     #38 fifo_flush_i = 1;
     #2 fifo_flush_i = 0;
   end
